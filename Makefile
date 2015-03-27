@@ -22,13 +22,13 @@ define Package/4th
 endef
 
 define Package/nodejs/description
-  notejs for openwrt
+  nodejs for openwrt
 endef
 
 MAKE_VARS += \
 	LIBRARIES="${PKG_INSTALL_DIR}/usr/lib" \
 	BINARIES="${PKG_INSTALL_DIR}/usr/bin"
-MAKE_FLAGS += \
+#MAKE_FLAGS += \
 	-C $(PKG_BUILD_DIR)/sources -f Makefile.NAN
 
 define Package/nodejs/install
